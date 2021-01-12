@@ -1,0 +1,28 @@
+
+.navbar {
+    width: 90%;
+    height: 194px;
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 1%;
+    ul {
+        list-style: none;
+        li {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            padding: 0 10px;
+            i.fas {
+                width: 14px;
+                height: 14px;
+                color: #009cff;
+            }
+            a {
+                color: inherit; 
+                text-decoration: inherit; 
+                font-size: 14px;
+            }
+        }
+    }
+}
