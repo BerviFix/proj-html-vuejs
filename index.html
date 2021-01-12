@@ -5,32 +5,58 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/app.css">
         <title>Sass Painter</title>
     </head>
 
     <body>
         <div id="app">
-            <header>
+            <header v-for="(nav, index) in navbarData">
                 <div class="overlay">
-                    <div class="navbar">
-                        <ul>
-                            <li>
-                                <i class="fas fa-phone"></i>
-                                <a href="">1-877-582-6735</a>
-                            </li>
-                    
-                            <li><a href="">Chat</a></li>
-                    
-                            <li><a href="">Sign in</a></li>
-                    
-                            <li><a href="">Cart</a></li>
-                    
-                            <select name="" id="">
-                                <option value="english">English</option>
-                                <option value="italian">Italian</option>
-                            </select>
-                        </ul>
+                    <div class="navbar" >
+                        <div class="navbar_right">
+                            <img :src="'img/' + nav.logo" alt="logo">
+                        </div>
+
+                        <div class="navbar_left">
+                            <ul>
+                                <li class="active">
+                                    {{nav.home}}
+                                </li>
+                            
+                                <li>
+                                    {{nav.about}}
+                                </li>
+                            
+                                <li>
+                                    {{nav.testmonials}}
+                                </li>
+                            
+                                <li>
+                                    {{nav.blog}}
+                                </li>
+                            
+                                <li>
+                                    {{nav.meet}}
+                                </li>
+                            
+                                <li>
+                                    {{nav.shop}}
+                                </li>
+                            
+                                <li>
+                                    {{nav.contact}}
+                                </li>
+                            
+                                <li>
+                                    <i class="fas fa-shopping-cart"></i>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </header>
