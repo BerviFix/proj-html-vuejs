@@ -144,10 +144,44 @@
                 <!-- critics-->
                 <section class="critics">
                     <div class="critics_wrapper">
+                        <div class="critics_top">
+                            <div class="left">
+                                <div v-for="critics in criticsTopData" :class="critics.class">
+                                    {{critics.text}}
+                                </div>
+                            </div>
 
+                            <div class="right">
+                                <button v-for="critics in criticsTopData[criticsTopData.length-1].btn" :class="critics.class">
+                                    <a href="#">{{critics.text}}</a>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="critics_bottom">
+                            <div class="left">
+                                <p v-for="critics in criticsBottomDataMainCard" :class="critics.class">
+                                    {{critics.text}}
+                                </p>
+                            </div>
+                            
+                            <div class="right">
+                                <p v-for="critics in criticsBottomDataCard" :class="critics.class">
+                                    {{critics.text}}
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 <!-- /critics-->
+
+                <!-- upcoming events-->
+                <section class="events">
+                    <div class="events_wrapper">
+                
+                    </div>
+                </section>
+                <!-- /upcoming events-->
             </main>
             <!-- /main -->
 

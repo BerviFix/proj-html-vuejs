@@ -73,31 +73,95 @@ var app = new Vue({
             },
         ],
         audioBookData: [
-                {
-                    text: 'New Audiobook',
-                    class: 'audio_title',
-                },
-                {
-                    text: 'NO TIME TO READ? NO PROBLEM. LISTEN TO IT',
-                    class: 'audio_subtitle',
-                },
-                {
-                    text: 'Donec fringilla nunc eu turpis dignissim, at euismod sapien tincidunt. Maecenas eleifend congue cursus.',
-                    class: 'audio_content',
-                },
-                {   
-                    logo: [
-                        {
-                            name: 'audible',
-                        },
-                        {
-                            name: 'barnes',
-                        },
-                        {
-                            name: 'kindle-fire',
-                        },
-                    ],
-                }
+            {
+                text: 'New Audiobook',
+                class: 'audio_title',
+            },
+            {
+                text: 'NO TIME TO READ? NO PROBLEM. LISTEN TO IT',
+                class: 'audio_subtitle',
+            },
+            {
+                text: 'Donec fringilla nunc eu turpis dignissim, at euismod sapien tincidunt. Maecenas eleifend congue cursus.',
+                class: 'audio_content',
+            },
+            {   
+                logo: [
+                    {
+                        name: 'audible',
+                    },
+                    {
+                        name: 'barnes',
+                    },
+                    {
+                        name: 'kindle-fire',
+                    },
+                ],
+            }
+        ],
+        criticsTopData: [
+            {
+                text: 'What The Critics Say',
+                class: 'critics_title',
+            },
+            {
+                text: 'TESTIMONIALS FROM AROUND THE WORLD',
+                class: 'critics_subtitle',
+            },
+            {   
+                btn: [
+                    {
+                        text: 'Read All Testimonials',
+                        class: 'critics_btn',
+                    },
+                ]
+                
+            },
+        ],
+        criticsBottomDataMainCard: [
+            {
+                text: 'Best Author Of His Generation',
+                class: 'critics_main_card_title',
+            },
+            {
+                class: 'divisor',
+            },
+            {
+                text: 'This book will change your perspective on life',
+                class: 'critics_main_card_subtitle',
+            },
+            {
+                text: 'Donec fringilla nunc eu turpis dignissim, at euismod sapien tincidunt, Maecenas eleifend congue cursus. In vitae enim quis sem pharetra. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.',
+                class: 'critics_main_card_content',
+            },
+            {
+                text: 'Donec rutrum congue leo eget malesuada. Vivamus scuscipit tortor eget felis porttitor volutpat. Nulla quis lorem ut liber. Proin eget tortor risus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada.',
+                class: 'critics_main_card_content',
+            },
+            {   
+                author: [
+                    {   
+                        logo: '',
+                        name: 'Justine Kilpatrick',
+                        company: 'The New York Times',
+                        class: 'critics_main_card_author',
+                    }
+                ]
+            },
+        ],
+        criticsBottomDataCard: [
+            {
+                text: 'What The Critics Say',
+                class: 'critics_title',
+            },
+            {
+                text: 'TESTIMONIALS FROM AROUND THE WORLD',
+                class: 'critics_subtitle',
+            },
+            {
+                text: 'TESTIMONIALS FROM AROUND THE WORLD',
+                class: 'critics_btn',
+            },
         ],
     },
     methods: {
