@@ -89,16 +89,27 @@
                                     {{book.secondSeller}}
                                 </button>
                             </div>
-
                         </div>
                     </div>
-
-                    <!-- <div class="slider" v-for="slide in sliderData">
-                        <p class="author_name">{{slide.authorName}}</p>
-                    </div> -->
                 </div>
             </header>
             <!-- /header -->
+
+            <!-- main -->
+            <main>
+                <section class="about" v-for="about in aboutData">
+                    <p class="about_title">{{about.sectionTitle}}</p>
+                    <p class="about_content">{{about.aboutContent}}</p>
+                    <button class="about_btn">
+                        <a href="#">{{about.buttonContent}}</a>
+                    </button>
+                </section>
+
+                <section class="platform">
+
+                </section>
+            </main>
+            <!-- /main -->
 
         </div>
         

@@ -50,6 +50,13 @@ var app = new Vue({
                 secondSeller: 'Buy On AppStore',
             }
         ],
+        aboutData: [
+            {
+                sectionTitle: 'More About Damon Vaughn',
+                aboutContent: 'Damon Vaughn is a professor of psychology at the University of Toronto, a clinical psychologist and the author of the multi-million copy bestseller “The story of my life.',
+                buttonContent: 'Meet The Author',
+            }
+        ],
     },
     methods: {
         clickContact: function (index) {
