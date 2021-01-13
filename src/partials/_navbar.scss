@@ -18,6 +18,11 @@
                 padding: 0 13px;
                 font-size: 17px;
                 font-weight: 400;
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                    cursor: pointer;
+                }
             &:before {
                     content: "";
                     display: block;

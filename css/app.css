@@ -20,13 +20,16 @@ header .overlay {
   background: black;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
 }
+header .header_bottom {
+  display: flex;
+  height: 75.7%;
+}
 header .header_bottom .slider {
   width: 50%;
-  height: 800px;
   padding-left: 14%;
   padding-top: 3%;
 }
-header .header_bottom .slider .writer {
+header .header_bottom .slider .author_name {
   font-size: 99px;
   font-family: "Kristi", cursive;
   color: #f4b429;
@@ -61,6 +64,7 @@ header .header_bottom .slider .slider_control .arrow_left {
   color: white;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+  cursor: pointer;
 }
 header .header_bottom .slider .slider_control .arrow_right {
   display: flex;
@@ -72,6 +76,80 @@ header .header_bottom .slider .slider_control .arrow_right {
   color: white;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  cursor: pointer;
+}
+header .header_bottom .buy_book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  width: 690px;
+  height: 400px;
+  margin-top: 10.71%;
+  background-color: white;
+}
+header .header_bottom .buy_book .buy_book_top {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .header_bottom .buy_book .buy_book_top .kindle_description .section_title {
+  font-size: 25px;
+  font-family: "DM Serif Display", serif;
+  color: black;
+}
+header .header_bottom .buy_book .buy_book_top .kindle_description .book_title {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "DM Sans", sans-serif;
+  color: #f4b429;
+  padding: 25px 0;
+}
+header .header_bottom .buy_book .buy_book_top .kindle_description .book_description {
+  font-size: 16px;
+  font-family: "DM Sans", sans-serif;
+  color: #484848;
+  width: 270px;
+  word-wrap: break-word;
+}
+header .header_bottom .buy_book .buy_book_bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+}
+header .header_bottom .buy_book .buy_book_bottom .amazon_bnt {
+  width: 275px;
+  height: 52px;
+  background-color: transparent;
+  border: 1px solid #a4d2c2;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  font-size: 16px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+}
+header .header_bottom .buy_book .buy_book_bottom .amazon_bnt i {
+  padding-right: 10px;
+}
+header .header_bottom .buy_book .buy_book_bottom .apple_bnt {
+  width: 275px;
+  height: 52px;
+  background-color: transparent;
+  border: 1px solid #a4d2c2;
+  border-left: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 16px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+}
+header .header_bottom .buy_book .buy_book_bottom .apple_bnt i {
+  padding-right: 10px;
 }
 
 .navbar {
@@ -97,6 +175,11 @@ header .header_bottom .slider .slider_control .arrow_right {
   padding: 0 13px;
   font-size: 17px;
   font-weight: 400;
+}
+.navbar .navbar_left ul li a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 .navbar .navbar_left ul li:before {
   content: "";

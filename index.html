@@ -27,43 +27,21 @@
                 <div class="overlay">
                     <div class="header_top">
                         <!-- navbar -->
-                        <div class="navbar" v-for="nav in navbarData">
+                        <div class="navbar" >
                             <div class="navbar_right">
-                                <img :src="'img/' + nav.logo" alt="logo">
+                                <img :src="'img/' + webSiteLogo" alt="logo">
                             </div>
                         
                             <div class="navbar_left">
                                 <ul>
-                                    <li class="active">
-                                        {{nav.home}}
+                                    <li v-for="(nav, index) in navbarData" @click="clickContact(index)" :class="{ active: selectedIndex == index }">
+                                        <a href="#">{{nav.text}}</a>
                                     </li>
-                        
+
                                     <li>
-                                        {{nav.about}}
-                                    </li>
-                        
-                                    <li>
-                                        {{nav.testmonials}}
-                                    </li>
-                        
-                                    <li>
-                                        {{nav.blog}}
-                                    </li>
-                        
-                                    <li>
-                                        {{nav.meet}}
-                                    </li>
-                        
-                                    <li>
-                                        {{nav.shop}}
-                                    </li>
-                        
-                                    <li>
-                                        {{nav.contact}}
-                                    </li>
-                        
-                                    <li>
-                                        <i class="fas fa-shopping-cart"></i>
+                                        <a href="#">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -73,7 +51,7 @@
                     
                     <div class="header_bottom">
                         <div class="slider" v-for="slide in sliderData">
-                            <p class="writer">{{slide.authorName}}</p>
+                            <p class="author_name">{{slide.authorName}}</p>
                             <p class="review">{{slide.review}}</p>
                             <p class="review_author">{{slide.reviewAuthor}}</p>
                             <div class="slider_control">
@@ -85,6 +63,33 @@
                                     <span class="material-icons">arrow_forward</span>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="buy_book">
+                            <div class="buy_book_top" v-for="book in buyBookData">
+                                <div class="kindle" >
+                                    <img :src="'img/' + book.ebookImg" alt="">
+                                </div>
+
+                                <div class="kindle_description">
+                                    <p class="section_title">{{book.sectionTitle}}</p>
+                                    <p class="book_title">{{book.bookTitle}}</p>
+                                    <p class="book_description">{{book.bookDescription}}</p>
+                                </div>
+                            </div>
+
+                            <div class="buy_book_bottom" v-for="book in buyBookData">
+                                <button class="amazon_bnt">
+                                    <i class="fab fa-amazon"></i>
+                                    {{book.firstSeller}}
+                                </button>
+                                
+                                <button class="apple_bnt">
+                                    <i class="fab fa-apple"></i>
+                                    {{book.secondSeller}}
+                                </button>
+                            </div>
+
                         </div>
                     </div>
 
