@@ -11,6 +11,62 @@ header {
         width: 100%;
         height: 100%;
         background: black;
-        background: linear-gradient(0deg, black 0%, rgba(0,0,0,0.1) 100%);
+        background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+    }
+
+    .header_bottom {
+        .slider {
+            width: 50%;
+            height: 800px;
+            padding-left: 14%;
+            padding-top: 3%;
+            .writer {
+                font-size: 99px;
+                font-family: $kristiFont;
+                color: $mainColor;
+            }
+            .review {
+                color: white;
+                font-size: 47px;
+                font-weight: 400;
+                font-family: $dmSerifDisplayFont;
+                line-height: 67px;
+            }
+            .review_author {
+                color: #a3a3a3;
+                font-size: 23px;
+                font-family: $dmSansFont;
+                font-style: italic;
+                padding-top: 6%;
+            }
+            .slider_control {
+                width: 106px;
+                display: flex;
+                justify-content: space-between;
+                padding-top: 43px;
+                .arrow_left {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 52px;
+                    height: 50px;
+                    background-color: rgba(0, 0, 0,);
+                    color: white;
+                    border-top-left-radius: 5px;
+                    border-bottom-left-radius: 5px;
+                }
+                .arrow_right {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 52px;
+                    height: 50px;
+                    background-color: rgba(0, 0, 0,);
+                    color: white;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                }
+            }
+        }
     }
 }

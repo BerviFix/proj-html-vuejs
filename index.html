@@ -8,58 +8,93 @@
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Serif+Display&family=Kristi&display=swap"
+        rel="stylesheet">
+        <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
         <link rel="stylesheet" href="css/app.css">
         <title>Sass Painter</title>
     </head>
 
     <body>
         <div id="app">
-            <header v-for="(nav, index) in navbarData">
+            <!-- header -->
+            <header>
                 <div class="overlay">
-                    <div class="navbar" >
-                        <div class="navbar_right">
-                            <img :src="'img/' + nav.logo" alt="logo">
+                    <div class="header_top">
+                        <!-- navbar -->
+                        <div class="navbar" v-for="nav in navbarData">
+                            <div class="navbar_right">
+                                <img :src="'img/' + nav.logo" alt="logo">
+                            </div>
+                        
+                            <div class="navbar_left">
+                                <ul>
+                                    <li class="active">
+                                        {{nav.home}}
+                                    </li>
+                        
+                                    <li>
+                                        {{nav.about}}
+                                    </li>
+                        
+                                    <li>
+                                        {{nav.testmonials}}
+                                    </li>
+                        
+                                    <li>
+                                        {{nav.blog}}
+                                    </li>
+                        
+                                    <li>
+                                        {{nav.meet}}
+                                    </li>
+                        
+                                    <li>
+                                        {{nav.shop}}
+                                    </li>
+                        
+                                    <li>
+                                        {{nav.contact}}
+                                    </li>
+                        
+                                    <li>
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
+                        <!-- /navbar -->
+                    </div>
+                    
+                    <div class="header_bottom">
+                        <div class="slider" v-for="slide in sliderData">
+                            <p class="writer">{{slide.authorName}}</p>
+                            <p class="review">{{slide.review}}</p>
+                            <p class="review_author">{{slide.reviewAuthor}}</p>
+                            <div class="slider_control">
+                                <div class="arrow_left">
+                                    <span class="material-icons">arrow_back</span>
+                                </div>
 
-                        <div class="navbar_left">
-                            <ul>
-                                <li class="active">
-                                    {{nav.home}}
-                                </li>
-                            
-                                <li>
-                                    {{nav.about}}
-                                </li>
-                            
-                                <li>
-                                    {{nav.testmonials}}
-                                </li>
-                            
-                                <li>
-                                    {{nav.blog}}
-                                </li>
-                            
-                                <li>
-                                    {{nav.meet}}
-                                </li>
-                            
-                                <li>
-                                    {{nav.shop}}
-                                </li>
-                            
-                                <li>
-                                    {{nav.contact}}
-                                </li>
-                            
-                                <li>
-                                    <i class="fas fa-shopping-cart"></i>
-                                </li>
-                            </ul>
+                                <div class="arrow_right">
+                                    <span class="material-icons">arrow_forward</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- <div class="slider" v-for="slide in sliderData">
+                        <p class="author_name">{{slide.authorName}}</p>
+                    </div> -->
                 </div>
             </header>
+            <!-- /header -->
+
         </div>
         
         <script src="js/main.js"></script>

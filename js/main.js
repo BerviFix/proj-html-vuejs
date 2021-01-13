@@ -2,6 +2,13 @@ var app = new Vue({
     el: '#app',
     data: {
         message: 'Hello Vue!',
+        sliderData: [
+            {
+                authorName: 'Damon Vaughn',
+                review: 'Best-selling author and the most influential public intellectual in the western world right now.',
+                reviewAuthor: '- The new York Times',
+            }
+        ] ,
         navbarData: [
             {
                 home: 'Home',

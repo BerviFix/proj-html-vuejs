@@ -8,7 +8,7 @@
         color: white;
         display: flex;
         flex-direction: row-reverse;
-        font-family: 'DM Sans', sans-serif;
+        font-family: $dmSansFont;
         ul {
             list-style: none;
             li {
