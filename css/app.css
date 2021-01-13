@@ -272,3 +272,71 @@ header .header_bottom .buy_book .buy_book_bottom .apple_bnt i {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.audio_book .audio_book_wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 70%;
+  height: 100%;
+  margin: auto;
+}
+.audio_book .audio_book_wrapper .app_screen {
+  width: 505px;
+  height: 529px;
+}
+.audio_book .audio_book_wrapper .app_screen img {
+  width: 100%;
+  height: 100%;
+}
+.audio_book .audio_book_wrapper .audio_book_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 505px;
+  height: 529px;
+}
+.audio_book .audio_book_wrapper .audio_book_content .wrapper {
+  width: 100%;
+  height: 255px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.audio_book .audio_book_wrapper .audio_book_content .wrapper .audio_title {
+  color: white;
+  font-size: 42px;
+  font-family: "DM Serif Display", serif;
+}
+.audio_book .audio_book_wrapper .audio_book_content .wrapper .audio_subtitle {
+  color: #f4b429;
+  font-size: 18px;
+  font-family: "DM Sans", sans-serif;
+}
+.audio_book .audio_book_wrapper .audio_book_content .wrapper .audio_content {
+  color: #999999;
+  font-size: 18px;
+  font-family: "DM Sans", sans-serif;
+  width: 430px;
+}
+.audio_book .audio_book_wrapper .audio_book_content .wrapper .audio_platform_logo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 44px;
+}
+.audio_book .audio_book_wrapper .audio_book_content .wrapper .audio_platform_logo .logo_container {
+  width: 136px;
+  height: 44px;
+}
+.audio_book .audio_book_wrapper .audio_book_content .wrapper .audio_platform_logo .logo_container img {
+  width: 100%;
+  height: 100%;
+}
+
+.critics {
+  width: 100%;
+  height: 1041px;
+  background-color: white;
+}

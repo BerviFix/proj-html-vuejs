@@ -70,4 +70,72 @@
     background-image: url("../img/audiobook_bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    .audio_book_wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        width: 70%;
+        height: 100%;
+        margin: auto;
+        .app_screen {
+            width: 505px;
+            height: 529px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .audio_book_content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 505px;
+            height: 529px;
+            .wrapper {
+                width: 100%;
+                height: 255px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center; 
+                .audio_title {
+                color: white;
+                font-size: 42px;
+                font-family: $dmSerifDisplayFont;
+                }
+                .audio_subtitle {
+                    color: $mainColor;
+                    font-size: 18px;
+                    font-family: $dmSansFont;
+                }
+                .audio_content {
+                    color: #999999;
+                    font-size: 18px;
+                    font-family: $dmSansFont;
+                    width: 430px;
+                }
+                .audio_platform_logo {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 100%;
+                    height: 44px;
+                    .logo_container{
+                        width: 136px;
+                        height: 44px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.critics {
+    width: 100%;
+    height: 1041px;
+    background-color: white;
 }

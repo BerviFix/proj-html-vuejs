@@ -3,6 +3,7 @@ var app = new Vue({
     data: {
         selectedIndex: 0,
         webSiteLogo: 'logo.png',
+        appScreen: 'audible-app.png',
         navbarData: [
             { 
                 text: 'Home',
@@ -70,6 +71,33 @@ var app = new Vue({
             {
                 name: 'kindle-fire',
             },
+        ],
+        audioBookData: [
+                {
+                    text: 'New Audiobook',
+                    class: 'audio_title',
+                },
+                {
+                    text: 'NO TIME TO READ? NO PROBLEM. LISTEN TO IT',
+                    class: 'audio_subtitle',
+                },
+                {
+                    text: 'Donec fringilla nunc eu turpis dignissim, at euismod sapien tincidunt. Maecenas eleifend congue cursus.',
+                    class: 'audio_content',
+                },
+                {   
+                    logo: [
+                        {
+                            name: 'audible',
+                        },
+                        {
+                            name: 'barnes',
+                        },
+                        {
+                            name: 'kindle-fire',
+                        },
+                    ],
+                }
         ],
     },
     methods: {

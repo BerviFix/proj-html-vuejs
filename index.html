@@ -119,9 +119,35 @@
 
                 <!-- audiobook-->
                 <section class="audio_book">
-                    <div></div>
+                    <div class="audio_book_wrapper">
+                        <div class="app_screen">
+                            <img :src="'img/' + appScreen" alt="">
+                        </div>
+
+                        <div class="audio_book_content" >
+                            <div class="wrapper">
+                                <p v-for="audio in audioBookData" :class="audio.class">
+                                    {{audio.text}}
+                                </p>
+
+                                <div class="audio_platform_logo" >
+                                    <div class="logo_container" v-for="platform in audioBookData[audioBookData.length-1].logo">
+                                        <img :src="'img/' + platform.name + '-white.png'" alt="platform_logo">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
                 <!-- /audiobook-->
+
+                <!-- critics-->
+                <section class="critics">
+                    <div class="critics_wrapper">
+
+                    </div>
+                </section>
+                <!-- /critics-->
             </main>
             <!-- /main -->
 
