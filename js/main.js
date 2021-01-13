@@ -57,6 +57,20 @@ var app = new Vue({
                 buttonContent: 'Meet The Author',
             }
         ],
+        platformData: [
+            {
+                name: 'ebay',
+            },
+            {
+                name: 'audible',
+            },
+            {
+                name: 'barnes',
+            },
+            {
+                name: 'kindle-fire',
+            },
+        ],
     },
     methods: {
         clickContact: function (index) {

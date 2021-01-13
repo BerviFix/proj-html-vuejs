@@ -97,6 +97,7 @@
 
             <!-- main -->
             <main>
+                <!-- about -->
                 <section class="about" v-for="about in aboutData">
                     <p class="about_title">{{about.sectionTitle}}</p>
                     <p class="about_content">{{about.aboutContent}}</p>
@@ -104,10 +105,23 @@
                         <a href="#">{{about.buttonContent}}</a>
                     </button>
                 </section>
+                <!-- /about -->
 
+                <!-- platform -->
                 <section class="platform">
-
+                    <div class="platform_wrapper">
+                        <div class="platform_logo" v-for="platform in platformData">
+                            <img :src="'img/' + platform.name + '.png'" alt="platform_logo">
+                        </div>
+                    </div>
                 </section>
+                <!-- /platform -->
+
+                <!-- audiobook-->
+                <section class="audio_book">
+                    <div></div>
+                </section>
+                <!-- /audiobook-->
             </main>
             <!-- /main -->
 
