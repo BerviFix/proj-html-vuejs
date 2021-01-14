@@ -142,7 +142,7 @@ var app = new Vue({
                 author: [
                     {   
                         logo: 'nytimes-logo',
-                        name: 'Justine Kilpatrick,',
+                        text: 'Justine Kilpatrick,',
                         class: 'critics_author',
                         company: [
                             {
