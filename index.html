@@ -1,288 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Serif+Display&family=Kristi&display=swap"
         rel="stylesheet">
-        <link
+    <link
         href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
         rel="stylesheet">
-        <link rel="stylesheet" href="css/app.css">
-        <title>Sass Painter</title>
-    </head>
+    <link rel="stylesheet" href="css/app.css">
+    <title>Sass Painter</title>
+</head>
 
-    <body>
-        <div id="app">
-            <!-- header -->
-            <header>
-                <div class="overlay">
-                    <div class="header_top">
-                        <!-- navbar -->
-                        <div class="navbar" >
-                            <div class="navbar_right">
-                                <img :src="'img/' + webSiteLogo" alt="logo">
-                            </div>
-                        
-                            <div class="navbar_left">
-                                <ul>
-                                    <li v-for="(nav, index) in navbarData" @click="clickContact(index)" :class="{ active: selectedIndex == index }">
-                                        <a href="#">{{nav.text}}</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">
-                                            <i class="fas fa-shopping-cart"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+<body>
+    <div id="app">
+        <!-- header -->
+        <header>
+            <div class="overlay">
+                <div class="header_top">
+                    <!-- navbar -->
+                    <div class="navbar">
+                        <div class="navbar_right">
+                            <img :src="'img/' + webSiteLogo" alt="logo">
                         </div>
-                        <!-- /navbar -->
+
+                        <div class="navbar_left">
+                            <ul>
+                                <li v-for="(nav, index) in navbarData" @click="clickContact(index)"
+                                    :class="{ active: selectedIndex == index }">
+                                    <a href="#">{{nav.text}}</a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    
-                    <div class="header_bottom">
-                        <div class="slider" v-for="slide in sliderData">
-                            <p class="author_name">{{slide.authorName}}</p>
-                            <p class="review">{{slide.review}}</p>
-                            <p class="review_author">{{slide.reviewAuthor}}</p>
-                            <div class="slider_control">
-                                <div class="arrow_left">
-                                    <span class="material-icons">arrow_back</span>
-                                </div>
+                    <!-- /navbar -->
+                </div>
 
-                                <div class="arrow_right">
-                                    <span class="material-icons">arrow_forward</span>
-                                </div>
+                <div class="header_bottom">
+                    <div class="slider" v-for="slide in sliderData">
+                        <p class="author_name">{{slide.authorName}}</p>
+                        <p class="review">{{slide.review}}</p>
+                        <p class="review_author">{{slide.reviewAuthor}}</p>
+                        <div class="slider_control">
+                            <div class="arrow_left">
+                                <span class="material-icons">arrow_back</span>
+                            </div>
+
+                            <div class="arrow_right">
+                                <span class="material-icons">arrow_forward</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buy_book">
+                        <div class="buy_book_top" v-for="book in buyBookData">
+                            <div class="kindle">
+                                <img :src="'img/' + book.ebookImg" alt="">
+                            </div>
+
+                            <div class="kindle_description">
+                                <p class="section_title">{{book.sectionTitle}}</p>
+                                <p class="book_title">{{book.bookTitle}}</p>
+                                <p class="book_description">{{book.bookDescription}}</p>
                             </div>
                         </div>
 
-                        <div class="buy_book">
-                            <div class="buy_book_top" v-for="book in buyBookData">
-                                <div class="kindle" >
-                                    <img :src="'img/' + book.ebookImg" alt="">
-                                </div>
+                        <div class="buy_book_bottom" v-for="book in buyBookData">
+                            <button class="amazon_bnt">
+                                <i class="fab fa-amazon"></i>
+                                {{book.firstSeller}}
+                            </button>
 
-                                <div class="kindle_description">
-                                    <p class="section_title">{{book.sectionTitle}}</p>
-                                    <p class="book_title">{{book.bookTitle}}</p>
-                                    <p class="book_description">{{book.bookDescription}}</p>
-                                </div>
-                            </div>
+                            <button class="apple_bnt">
+                                <i class="fab fa-apple"></i>
+                                {{book.secondSeller}}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- /header -->
 
-                            <div class="buy_book_bottom" v-for="book in buyBookData">
-                                <button class="amazon_bnt">
-                                    <i class="fab fa-amazon"></i>
-                                    {{book.firstSeller}}
-                                </button>
-                                
-                                <button class="apple_bnt">
-                                    <i class="fab fa-apple"></i>
-                                    {{book.secondSeller}}
-                                </button>
+        <!-- main -->
+        <main>
+            <!-- about -->
+            <section class="about" v-for="about in aboutData">
+                <p class="about_title">{{about.sectionTitle}}</p>
+                <p class="about_content">{{about.aboutContent}}</p>
+                <button class="about_btn">
+                    <a href="#">{{about.buttonContent}}</a>
+                </button>
+            </section>
+            <!-- /about -->
+
+            <!-- platform -->
+            <section class="platform">
+                <div class="platform_wrapper">
+                    <div class="platform_logo" v-for="platform in platformData">
+                        <img :src="'img/' + platform.name + '.png'" alt="platform_logo">
+                    </div>
+                </div>
+            </section>
+            <!-- /platform -->
+
+            <!-- audiobook-->
+            <section class="audio_book">
+                <div class="audio_book_wrapper">
+                    <div class="app_screen">
+                        <img :src="'img/' + appScreen" alt="">
+                    </div>
+
+                    <div class="audio_book_content">
+                        <div class="wrapper">
+                            <p v-for="audio in audioBookData" :class="audio.class">
+                                {{audio.text}}
+                            </p>
+
+                            <div class="audio_platform_logo">
+                                <div class="logo_container"
+                                    v-for="platform in audioBookData[audioBookData.length-1].logo">
+                                    <img :src="'img/' + platform.name + '-white.png'" alt="platform_logo">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </header>
-            <!-- /header -->
+            </section>
+            <!-- /audiobook-->
 
-            <!-- main -->
-            <main>
-                <!-- about -->
-                <section class="about" v-for="about in aboutData">
-                    <p class="about_title">{{about.sectionTitle}}</p>
-                    <p class="about_content">{{about.aboutContent}}</p>
-                    <button class="about_btn">
-                        <a href="#">{{about.buttonContent}}</a>
-                    </button>
-                </section>
-                <!-- /about -->
+            <!-- critics-->
+            <section class="critics">
+                <div class="critics_wrapper">
+                    <div class="critics_top">
+                        <div class="left">
+                            <div v-for="critics in criticsTopData" :class="critics.class">
+                                {{critics.text}}
+                            </div>
+                        </div>
 
-                <!-- platform -->
-                <section class="platform">
-                    <div class="platform_wrapper">
-                        <div class="platform_logo" v-for="platform in platformData">
-                            <img :src="'img/' + platform.name + '.png'" alt="platform_logo">
+                        <div class="right">
+                            <button v-for="critics in criticsTopData[criticsTopData.length-1].btn"
+                                :class="critics.class">
+                                <a href="#">{{critics.text}}</a>
+                            </button>
                         </div>
                     </div>
-                </section>
-                <!-- /platform -->
 
-                <!-- audiobook-->
-                <section class="audio_book">
-                    <div class="audio_book_wrapper">
-                        <div class="app_screen">
-                            <img :src="'img/' + appScreen" alt="">
-                        </div>
+                    <div class="critics_bottom">
+                        <div class="left">
+                            <div v-for="critics in criticsBottomRight" :class="critics.class">
+                                <div class="overlay">
+                                    <div class="content_wrapper">
+                                        <p class="critics_big_card_title">
+                                            {{critics.title}}
+                                        </p>
 
-                        <div class="audio_book_content" >
-                            <div class="wrapper">
-                                <p v-for="audio in audioBookData" :class="audio.class">
-                                    {{audio.text}}
-                                </p>
+                                        <p class="critics_big_card_subtitle">
+                                            {{critics.subtitle}}
+                                        </p>
 
-                                <div class="audio_platform_logo" >
-                                    <div class="logo_container" v-for="platform in audioBookData[audioBookData.length-1].logo">
-                                        <img :src="'img/' + platform.name + '-white.png'" alt="platform_logo">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- /audiobook-->
+                                        <p class="critics_big_card_content">
+                                            {{critics.text}}
+                                        </p>
 
-                <!-- critics-->
-                <section class="critics">
-                    <div class="critics_wrapper">
-                        <div class="critics_top">
-                            <div class="left">
-                                <div v-for="critics in criticsTopData" :class="critics.class">
-                                    {{critics.text}}
-                                </div>
-                            </div>
-
-                            <div class="right">
-                                <button v-for="critics in criticsTopData[criticsTopData.length-1].btn" :class="critics.class">
-                                    <a href="#">{{critics.text}}</a>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="critics_bottom" >
-                            <div class="left">
-                                <div v-for="critics in criticsBottomRight" :class="critics.class">
-                                    <div class="overlay">
-                                        <div class="content_wrapper">
-                                            <p class="critics_big_card_title">
-                                                {{critics.title}}
+                                        <div class="critics_big_card_author">
+                                            <img :src="'img/' + critics.journalIcon + '.png'" alt="critics_logo">
+                                            <p class="critics_author">
+                                                {{critics.author}} <span
+                                                    class="critics_company">{{critics.journalName}}</span>
                                             </p>
-
-                                            <p class="critics_big_card_subtitle">
-                                                {{critics.subtitle}}
-                                            </p>
-
-                                            <p class="critics_big_card_content">
-                                                {{critics.text}}
-                                            </p>
-
-                                            <div class="critics_big_card_author">
-                                                <img :src="'img/' + critics.journalIcon + '.png'" alt="critics_logo">
-                                                <p class="critics_author">
-                                                    {{critics.author}} <span class="critics_company">{{critics.journalName}}</span>
-                                                </p>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            
-                            <div class="right">
-                                <div v-for="critics in criticsBottomLeft" :class="critics.class">
-                                    <p class="critics_little_card_title">
-                                        {{critics.title}}
+                        </div>
+
+                        <div class="right">
+                            <div v-for="critics in criticsBottomLeft" :class="critics.class">
+                                <p class="critics_little_card_title">
+                                    {{critics.title}}
+                                </p>
+
+                                <p class="critics_little_card_content">
+                                    {{critics.text}}
+                                </p>
+
+                                <div class="critics_little_card_author">
+                                    <img :src="'img/' + critics.journalIcon + '.png'" alt="critics_logo">
+                                    <p class="critics_author">
+                                        {{critics.author}} <span class="critics_company">{{critics.journalName}}</span>
                                     </p>
-                                    
-                                    <p class="critics_little_card_content">
-                                        {{critics.text}}
-                                    </p>
-                                    
-                                    <div class="critics_little_card_author">
-                                        <img :src="'img/' + critics.journalIcon + '.png'" alt="critics_logo">
-                                        <p class="critics_author">
-                                            {{critics.author}} <span class="critics_company">{{critics.journalName}}</span>
-                                        </p>
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
-                <!-- /critics-->
+                </div>
+            </section>
+            <!-- /critics-->
 
-                <!-- upcoming events-->
-                <section class="events">
-                    <div class="events_wrapper">
-                        <div class="events_top">
-                            <p class="section_title">
-                                Upcoming Events
-                            </p>
-                            
-                            <p class="section_subtitle">
-                                MEET THE AUTHOR IN PERSON
-                            </p>
-                        </div>
-                        
-                        <div class="events_bottom">
-                            <div class="event_card">
-                                <img src="img/event1.jpg" alt="">
-                                <p class="event_title">Chicago Book Signing</p>
-                                <p class="event_content">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a
+            <!-- upcoming events-->
+            <section class="events">
+                <div class="events_wrapper">
+                    <div class="events_top">
+                        <p class="section_title">
+                            Upcoming Events
+                        </p>
+
+                        <p class="section_subtitle">
+                            MEET THE AUTHOR IN PERSON
+                        </p>
+                    </div>
+
+                    <div class="events_bottom">
+                        <div class="event_card">
+                            <img src="img/event1.jpg" alt="">
+                            <p class="event_title">Chicago Book Signing</p>
+                            <p class="event_content">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris
+                                blandit aliquet elit, eget tincidunt nibh pulvinar a
                                 nulla.</p>
-                            </div>
-                            
-                            <div class="event_card">
-                                <img src="img/event2.jpg" alt="">
-                                <p class="event_title">Meet & Greet With Amanda</p>
-                                <p class="event_content">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Praesent sapien massa, convallis a pellentesque nec,
+                        </div>
+
+                        <div class="event_card">
+                            <img src="img/event2.jpg" alt="">
+                            <p class="event_title">Meet & Greet With Amanda</p>
+                            <p class="event_content">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+                                Praesent sapien massa, convallis a pellentesque nec,
                                 egestas.</p>
-                            </div>
-                            
-                            <div class="event_card">
-                                <img src="img/event3.jpg" alt="">
-                                <p class="event_title">Open Book: Dialogues</p>
-                                <p class="event_content">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a
+                        </div>
+
+                        <div class="event_card">
+                            <img src="img/event3.jpg" alt="">
+                            <p class="event_title">Open Book: Dialogues</p>
+                            <p class="event_content">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris
+                                blandit aliquet elit, eget tincidunt nibh pulvinar a
                                 nulla.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /upcoming events-->
+
+            <!-- newsletter-->
+            <section class="newsletter">
+                <div class="newsletter_wrapper">
+                    <p class="newsletter_title">
+                        Subscribe To My Newsletter
+                    </p>
+
+                    <p class="newsletter_subtitle">
+                        BE NOTIFIED ABOUT BOOK SIGNING TOUR DATES
+                    </p>
+
+                    <form action="">
+                        <input type="text" placeholder="Insert your email...*" class="newsletter_input">
+                        <button class="newsletter_btn">Subscribe</button>
+                    </form>
+
+                    <p class="newsletter_content">
+                        Donec fringilla nunc eu turpis dignissim, at euismod sapien tincidunt.
+                    </p>
+                </div>
+            </section>
+            <!-- /newsletter-->
+
+            <!-- info-->
+            <section class="info">
+                <div class="info_wrapper">
+                    <div class="info_top">
+                        <p class="section_title">
+                            Dig A Little Deeper Into Damon Vaughn
+                        </p>
+                    
+                        <p class="section_subtitle">
+                            FIND OUT MORE ABOUT THE AUTHOR HIMSELF
+                        </p>
+                    </div>
+                    
+                    <div class="info_bottom">
+                        <div class="info_card" style="background-image: url('img/info1.jpg')">
+                            <div class="overlay">
+                                <p class="info_title">About Me</p>
+                                <p class="info_content">Vestibulum ante ipsum primis</p>
+                            </div>
+                        </div>
+                    
+                        <div class="info_card" style="background-image: url('img/info2.jpg')">
+                            <div class="overlay">
+                                <p class="info_title">My Latest Book</p>
+                                <p class="info_content">Vestibulum ante ipsum primis</p>
+                            </div>
+                        </div>
+                    
+                        <div class="info_card"  style="background-image: url('img/info3.jpg')">
+                            <div class="overlay">
+                                <p class="info_title">Book Signing</p>
+                                <p class="info_content">Vestibulum ante ipsum primis</p>
                             </div>
                         </div>
                     </div>
-                </section>
-                <!-- /upcoming events-->
+                </div>
+            </section>
+            <!-- /info-->
 
-                <!-- newsletter-->
-                <section class="newsletter">
-                    <div class="newsletter_wrapper">
-                        <p class="newsletter_title">
-                            Subscribe To My Newsletter
-                        </p>
-
-                        <p class="newsletter_subtitle">
-                            BE NOTIFIED ABOUT BOOK SIGNING TOUR DATES
-                        </p>
-
-                        <form action="">
-                            <input type="text" placeholder="Insert your email...*" class="newsletter_input">
-                            <button class="newsletter_btn">Subscribe</button>
-                        </form>
-                        
-                        <p class="newsletter_content">
-                            Donec fringilla nunc eu turpis dignissim, at euismod sapien tincidunt.
-                        </p>
+            <!-- articles-->
+            <section class="articles">
+                <div class="articles_wrapper">
+                    <div class="articles_top">
+                        <div class="left">
+                            <div>
+                                {{articles.text}}
+                            </div>
+                        </div>
+            
+                        <div class="right">
+                            <button>
+                                <a href="#">{{articles.text}}</a>
+                            </button>
+                        </div>
                     </div>
-                </section>
-                <!-- /newsletter-->
-
-                <!-- author-->
-                <section class="author">
-                    <div class="author_wrapper">
-                        
+            
+                    <div class="articles_bottom">
+                        <div class="left">
+                            <div>
+                                <div class="overlay">
+                                    <div class="content_wrapper">
+                                        <p class="articles_big_card_title">
+                                            {{articles.title}}
+                                        </p>
+            
+                                        <p class="articles_big_card_subtitle">
+                                            {{articles.subtitle}}
+                                        </p>
+            
+                                        <p class="articles_big_card_content">
+                                            {{articles.text}}
+                                        </p>
+            
+                                        <div class="articles_big_card_author">
+                                            <img :src="'img/' + articles.journalIcon + '.png'" alt="articles_logo">
+                                            <p class="articles_author">
+                                                {{articles.author}} <span class="articles_company">{{articles.journalName}}</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="right">
+                            <div>
+                                <p class="articles_little_card_title">
+                                    {{articles.title}}
+                                </p>
+            
+                                <p class="articles_little_card_content">
+                                    {{articles.text}}
+                                </p>
+            
+                                <div class="articles_little_card_author">
+                                    <img :src="'img/' + articles.journalIcon + '.png'" alt="articles_logo">
+                                    <p class="articles_author">
+                                        {{articles.author}} <span class="articles_company">{{critics.journalName}}</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </section>
-                <!-- /author-->
-            </main>
-            <!-- /main -->
+                </div>
+            </section>
+            <!-- /articles-->
 
-        </div>
-        
-        <script src="js/main.js"></script>
-    </body>
+            <!-- footer-->
+            <footer>
+                <div class="footer_wrapper">
+            
+                </div>
+            </footer>
+            <!-- /footer-->
+        </main>
+        <!-- /main -->
+
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
 </html>

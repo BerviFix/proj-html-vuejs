@@ -675,7 +675,107 @@ header .header_bottom .buy_book .buy_book_bottom .apple_bnt i {
   text-align: center;
 }
 
-.author {
+.info {
   width: 100%;
   height: 847px;
+}
+.info .info_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 78%;
+  height: 100%;
+  margin: auto;
+}
+.info .info_wrapper .info_top {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 82px;
+  margin-bottom: 60px;
+}
+.info .info_wrapper .info_top .section_title {
+  font-size: 40px;
+  font-family: "DM Serif Display", serif;
+}
+.info .info_wrapper .info_top .section_subtitle {
+  font-size: 18px;
+  font-family: "DM Sans", sans-serif;
+  color: #49a987;
+  font-weight: 500;
+}
+.info .info_wrapper .info_bottom {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 451px;
+}
+.info .info_wrapper .info_bottom .info_card {
+  position: relative;
+  width: 412px;
+  height: 517px;
+  border-radius: 0px 0px 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  transition: all 0.2s linear;
+}
+.info .info_wrapper .info_bottom .info_card:hover {
+  box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.5);
+  transform: scale(1.05);
+}
+.info .info_wrapper .info_bottom .info_card .overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.info .info_wrapper .info_bottom .info_card .overlay .info_title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 26px;
+  font-family: "DM Sans", sans-serif;
+  text-align: center;
+  color: white;
+}
+.info .info_wrapper .info_bottom .info_card .overlay .info_title:after {
+  content: "";
+  background-color: lightgrey;
+  display: block;
+  width: 50px;
+  height: 2px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.info .info_wrapper .info_bottom .info_card .overlay .info_content {
+  width: 381px;
+  font-size: 18px;
+  font-family: "DM Sans", sans-serif;
+  color: #f4b429;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.articles {
+  width: 100%;
+  height: 1088px;
+  background-color: #fef7e9;
+}
+
+footer {
+  width: 100%;
+  height: 515px;
+  background-image: url("../img/background_header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
