@@ -118,56 +118,34 @@ var app = new Vue({
                 
             },
         ],
-        criticsBottomDataMainCard: [
+        criticsBottomRight: [
             {
-                text: 'Best Author Of His Generation',
-                class: 'critics_main_card_title',
-            },
-            {
-                class: 'divisor',
-            },
-            {
-                text: 'This book will change your perspective on life',
-                class: 'critics_main_card_subtitle',
-            },
-            {
-                text: 'Donec fringilla nunc eu turpis dignissim, at euismod sapien tincidunt, Maecenas eleifend congue cursus. In vitae enim quis sem pharetra. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.',
-                class: 'critics_main_card_content',
-            },
-            {
-                text: 'Donec rutrum congue leo eget malesuada. Vivamus scuscipit tortor eget felis porttitor volutpat. Nulla quis lorem ut liber. Proin eget tortor risus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada.',
-                class: 'critics_main_card_content',
-            },
-            {   
-                author: [
-                    {   
-                        logo: 'nytimes-logo',
-                        text: 'Justine Kilpatrick,',
-                        class: 'critics_author',
-                        company: [
-                            {
-                                text: ' The New York Times',
-                                class: 'critics_company',
-                            },
-                        ], 
-                        
-                    }
-                ]
+                title: 'Best Author Of His Generation',
+                subtitle: 'This book will change your perspective on life',
+                text: 'Donec fringilla nunc eu turpis dignissim, at euismod sapien tincidunt, Maecenas eleifend congue cursus. In vitae enim quis sem pharetra. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Vivamus scuscipit tortor eget felis porttitor volutpat. Nulla quis lorem ut liber. Proin eget tortor risus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada.',
+                author: 'Justine Kilpatrick, ',
+                journalName: 'The New York Times',
+                journalIcon: 'nytimes-logo',
+                class: 'big_card'
             },
         ],
-        criticsBottomDataCard: [
+        criticsBottomLeft: [
             {
-                text: 'What The Critics Say',
-                class: 'critics_title',
+                title: 'A True Masterpiece, Bravo!',
+                text: 'Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus suscipit tortor eget felis porttitor volutpat. Nulla quis lorem ut libero malesuada feug at.',
+                author: 'Gerald Hendley, ',
+                journalName: 'The Guardian',
+                journalIcon: 'theguardian-logo',
+                class: 'little_card'
             },
             {
-                text: 'TESTIMONIALS FROM AROUND THE WORLD',
-                class: 'critics_subtitle',
-            },
-            {
-                text: 'TESTIMONIALS FROM AROUND THE WORLD',
-                class: 'critics_btn',
-            },
+                title: 'A Unique View On The World',
+                text: 'Donec sollicitudin molestie malesuada. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Nulla quis lorem ut libero malesuada feugiat. Vestibulum ac diam sit amet.',
+                author: 'Mary Maxey, ',
+                journalName: 'The Globe And Mail',
+                journalIcon: 'globe-logo',
+                class: 'little_card'
+            }
         ],
     },
     methods: {

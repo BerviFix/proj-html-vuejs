@@ -158,19 +158,27 @@
                             </div>
                         </div>
 
-                        <div class="critics_bottom">
+                        <div class="critics_bottom" >
                             <div class="left">
-                                <div class="main_card">
+                                <div v-for="critics in criticsBottomRight" :class="critics.class">
                                     <div class="overlay">
                                         <div class="content_wrapper">
-                                            <p v-for="critics in criticsBottomDataMainCard" :class="critics.class">
+                                            <p class="critics_big_card_title">
+                                                {{critics.title}}
+                                            </p>
+
+                                            <p class="critics_big_card_subtitle">
+                                                {{critics.subtitle}}
+                                            </p>
+
+                                            <p class="critics_big_card_content">
                                                 {{critics.text}}
                                             </p>
 
-                                            <div v-for="critics in criticsBottomDataMainCard[criticsBottomDataMainCard.length-1].author" class="critics_main_card_author">
-                                                <img :src="'img/' + critics.logo + '.png'" alt="critics_logo">
-                                                <p :class="critics.class">
-                                                    {{critics.text}} <span :class="critics.company[critics.company.length-1].class">{{critics.company[critics.company.length-1].text}}</span>
+                                            <div class="critics_big_card_author">
+                                                <img :src="'img/' + critics.journalIcon + '.png'" alt="critics_logo">
+                                                <p class="critics_author">
+                                                    {{critics.author}} <span class="critics_company">{{critics.journalName}}</span>
                                                 </p>
                                             </div>
                                         </div>
@@ -179,9 +187,22 @@
                             </div>
                             
                             <div class="right">
-                                <!-- <p v-for="critics in criticsBottomDataCard" :class="critics.class">
-                                    {{critics.text}}
-                                </p> -->
+                                <div v-for="critics in criticsBottomLeft" :class="critics.class">
+                                    <p class="critics_little_card_title">
+                                        {{critics.title}}
+                                    </p>
+                                    
+                                    <p class="critics_little_card_content">
+                                        {{critics.text}}
+                                    </p>
+                                    
+                                    <div class="critics_little_card_author">
+                                        <img :src="'img/' + critics.journalIcon + '.png'" alt="critics_logo">
+                                        <p class="critics_author">
+                                            {{critics.author}} <span class="critics_company">{{critics.journalName}}</span>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
