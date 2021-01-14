@@ -166,6 +166,13 @@
                                             <p v-for="critics in criticsBottomDataMainCard" :class="critics.class">
                                                 {{critics.text}}
                                             </p>
+
+                                            <div v-for="critics in criticsBottomDataMainCard[criticsBottomDataMainCard.length-1].author" class="critics_main_card_author">
+                                                <img :src="'img/' + critics.logo + '.png'" alt="critics_logo">
+                                                <p :class="critics.class">
+                                                    {{critics.name}} <span :class="critics.company[critics.company.length-1].class">{{critics.company[critics.company.length-1].text}}</span>
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

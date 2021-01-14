@@ -456,6 +456,24 @@ header .header_bottom .buy_book .buy_book_bottom .apple_bnt i {
   font-family: "DM Sans", sans-serif;
   margin-top: 35px;
 }
+.critics .critics_wrapper .critics_bottom .left .main_card .overlay .content_wrapper .critics_main_card_author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 381px;
+  margin-top: 45px;
+}
+.critics .critics_wrapper .critics_bottom .left .main_card .overlay .content_wrapper .critics_main_card_author .critics_author {
+  font-size: 18px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+}
+.critics .critics_wrapper .critics_bottom .left .main_card .overlay .content_wrapper .critics_main_card_author .critics_author .critics_company {
+  font-size: 18px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  color: #49a987;
+}
 .critics .critics_wrapper .critics_bottom .right {
   width: 41%;
   background-color: lightcoral;

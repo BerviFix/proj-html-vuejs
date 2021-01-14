@@ -248,7 +248,22 @@
                                 margin-top: 35px;
                             }
                             .critics_main_card_author {
-
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                width: 381px;
+                                margin-top: 45px;
+                                .critics_author {
+                                    font-size: 18px;
+                                    font-family: $dmSansFont;
+                                    font-weight: 700;
+                                    .critics_company {
+                                        font-size: 18px;
+                                        font-family: $dmSansFont;
+                                        font-weight: 500;
+                                        color: #49a987;
+                                    }
+                                }
                             }
                         }
                         

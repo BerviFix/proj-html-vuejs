@@ -141,10 +141,16 @@ var app = new Vue({
             {   
                 author: [
                     {   
-                        logo: '',
-                        name: 'Justine Kilpatrick',
-                        company: 'The New York Times',
-                        class: 'critics_main_card_author',
+                        logo: 'nytimes-logo',
+                        name: 'Justine Kilpatrick,',
+                        class: 'critics_author',
+                        company: [
+                            {
+                                text: ' The New York Times',
+                                class: 'critics_company',
+                            },
+                        ], 
+                        
                     }
                 ]
             },
