@@ -397,6 +397,7 @@ header .header_bottom .buy_book .buy_book_bottom .apple_bnt i {
   display: flex;
   width: 100%;
   height: 100%;
+  margin-top: 30px;
 }
 .critics .critics_wrapper .critics_bottom .left {
   width: 59%;
