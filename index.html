@@ -160,15 +160,21 @@
 
                         <div class="critics_bottom">
                             <div class="left">
-                                <p v-for="critics in criticsBottomDataMainCard" :class="critics.class">
-                                    {{critics.text}}
-                                </p>
+                                <div class="main_card">
+                                    <div class="overlay">
+                                        <div class="content_wrapper">
+                                            <p v-for="critics in criticsBottomDataMainCard" :class="critics.class">
+                                                {{critics.text}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             
                             <div class="right">
-                                <p v-for="critics in criticsBottomDataCard" :class="critics.class">
+                                <!-- <p v-for="critics in criticsBottomDataCard" :class="critics.class">
                                     {{critics.text}}
-                                </p>
+                                </p> -->
                             </div>
                         </div>
                     </div>
