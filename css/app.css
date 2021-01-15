@@ -133,6 +133,7 @@ header .header_bottom .buy_book .buy_book_bottom .amazon_bnt {
   font-family: "DM Sans", sans-serif;
   font-weight: 500;
   outline: none;
+  cursor: pointer;
 }
 header .header_bottom .buy_book .buy_book_bottom .amazon_bnt i {
   padding-right: 10px;
@@ -153,6 +154,7 @@ header .header_bottom .buy_book .buy_book_bottom .apple_bnt {
   font-family: "DM Sans", sans-serif;
   font-weight: 500;
   outline: none;
+  cursor: pointer;
 }
 header .header_bottom .buy_book .buy_book_bottom .apple_bnt i {
   padding-right: 10px;
@@ -183,6 +185,7 @@ header .aside_box .box {
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px -5px 20px 5px;
   background-color: white;
+  cursor: pointer;
 }
 header .aside_box .box i {
   font-size: 20px;
