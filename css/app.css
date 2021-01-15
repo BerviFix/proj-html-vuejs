@@ -927,6 +927,19 @@ header .aside_box .box p {
   margin-left: auto;
   font-family: "DM Sans", sans-serif;
 }
+.articles .articles_wrapper .articles_bottom .right .little_card .img_container {
+  width: 337px;
+  height: 212px;
+  overflow: hidden;
+}
+.articles .articles_wrapper .articles_bottom .right .little_card .img_container img {
+  width: 100%;
+  height: 100;
+  transition: transform 0.5s linear;
+}
+.articles .articles_wrapper .articles_bottom .right .little_card .img_container img:hover {
+  transform: scale(1.1);
+}
 .articles .articles_wrapper .articles_bottom .right .little_card .articles_little_card_title {
   font-size: 24px;
   padding-top: 15px;
