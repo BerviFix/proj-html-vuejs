@@ -51,6 +51,16 @@ var app = new Vue({
                 secondSeller: 'Buy On AppStore',
             }
         ],
+        asideBox: [
+            {
+                icon: 'fas fa-images',
+                text: "Demos",
+            },
+            {
+                icon: "fas fa-shopping-cart",
+                text: "Buy Now",
+            }
+        ],
         aboutData: [
             {
                 sectionTitle: 'More About Damon Vaughn',

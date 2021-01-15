@@ -92,6 +92,13 @@
                         </div>
                     </div>
                 </div>
+
+            </div>
+            <div class="aside_box">
+                <div class="box" v-for="item in asideBox">
+                    <i :class="item.icon"></i>
+                    <p>{{ item.text }}</p>
+                </div>
             </div>
         </header>
         <!-- /header -->

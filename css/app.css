@@ -161,6 +161,38 @@ header .header_bottom .buy_book .buy_book_bottom .apple_bnt:hover {
   border: 1px solid #37d08d;
   box-shadow: rgba(11, 150, 102, 0.15) 0px 3px 10px 0px;
 }
+header .aside_box {
+  position: fixed;
+  top: 150px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 66px;
+  height: 140px;
+}
+header .aside_box .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 66px;
+  height: 66px;
+  padding: 8px 6px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px -5px 20px 5px;
+  background-color: white;
+}
+header .aside_box .box i {
+  font-size: 20px;
+  color: #33475b;
+}
+header .aside_box .box p {
+  font-size: 13px;
+  color: #4a5259;
+  font-family: sans-serif;
+}
 
 .navbar {
   display: flex;
