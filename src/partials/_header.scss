@@ -131,8 +131,14 @@ header {
                     font-size: 16px;
                     font-family: $dmSansFont;
                     font-weight: 500;
+                    outline: none;
                     i {
                         padding-right: 10px;
+                    }
+                    &:hover {
+                        border: 1px solid #37d08d;
+                        border-right: 1px solid #37d08d;
+                        box-shadow: rgba(11, 150, 102, 0.15) 0px 3px 10px 0px;
                     }
                 }
                 .apple_bnt {
@@ -140,14 +146,18 @@ header {
                     height: 52px;
                     background-color: transparent;
                     border: 1px solid #a4d2c2;
-                    border-left: none;
                     border-top-right-radius: 5px;
                     border-bottom-right-radius: 5px;
                     font-size: 16px;
                     font-family: $dmSansFont;
                     font-weight: 500;
+                    outline: none;
                     i {
                         padding-right: 10px;
+                    }
+                    &:hover {
+                        border: 1px solid #37d08d;
+                        box-shadow: rgba(11, 150, 102, 0.15) 0px 3px 10px 0px;
                     }
                 }
             }

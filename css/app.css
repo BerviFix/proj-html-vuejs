@@ -132,24 +132,34 @@ header .header_bottom .buy_book .buy_book_bottom .amazon_bnt {
   font-size: 16px;
   font-family: "DM Sans", sans-serif;
   font-weight: 500;
+  outline: none;
 }
 header .header_bottom .buy_book .buy_book_bottom .amazon_bnt i {
   padding-right: 10px;
+}
+header .header_bottom .buy_book .buy_book_bottom .amazon_bnt:hover {
+  border: 1px solid #37d08d;
+  border-right: 1px solid #37d08d;
+  box-shadow: rgba(11, 150, 102, 0.15) 0px 3px 10px 0px;
 }
 header .header_bottom .buy_book .buy_book_bottom .apple_bnt {
   width: 275px;
   height: 52px;
   background-color: transparent;
   border: 1px solid #a4d2c2;
-  border-left: none;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   font-size: 16px;
   font-family: "DM Sans", sans-serif;
   font-weight: 500;
+  outline: none;
 }
 header .header_bottom .buy_book .buy_book_bottom .apple_bnt i {
   padding-right: 10px;
+}
+header .header_bottom .buy_book .buy_book_bottom .apple_bnt:hover {
+  border: 1px solid #37d08d;
+  box-shadow: rgba(11, 150, 102, 0.15) 0px 3px 10px 0px;
 }
 
 .navbar {
