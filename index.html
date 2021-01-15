@@ -322,48 +322,47 @@
                 <div class="articles_wrapper">
                     <div class="articles_top">
                         <div class="left">
-                            <div>
-                                {{articles.text}}
-                            </div>
+                            <p class="articles_title">
+                                Recent Articles
+                            </p>
+
+                            <p class="articles_subtitle">
+                                READ THE LATEST ENTRIES
+                            </p>
                         </div>
             
                         <div class="right">
                             <button>
-                                <a href="#">{{articles.text}}</a>
+                                <a href="#">All Articles</a>
                             </button>
                         </div>
                     </div>
             
                     <div class="articles_bottom">
                         <div class="left">
-                            <div>
-                                <div class="overlay">
-                                    <div class="content_wrapper">
-                                        <p class="articles_big_card_title">
-                                            {{articles.title}}
-                                        </p>
-            
-                                        <p class="articles_big_card_subtitle">
-                                            {{articles.subtitle}}
-                                        </p>
-            
-                                        <p class="articles_big_card_content">
-                                            {{articles.text}}
-                                        </p>
-            
-                                        <div class="articles_big_card_author">
-                                            <img :src="'img/' + articles.journalIcon + '.png'" alt="articles_logo">
-                                            <p class="articles_author">
-                                                {{articles.author}} <span class="articles_company">{{articles.journalName}}</span>
-                                            </p>
-                                        </div>
-                                    </div>
+                            <div class="big_card">
+                                <img src="img/articles1.jpg" alt="" height="460px">
+                                
+                                <div class="content_wrapper">
+                                    <p class="articles_big_card_title">
+                                        20 Creativity Tips
+                                    </p>
+                                    
+                                    <p class="articles_big_card_subtitle">
+                                        By admin | October 24th, 2019 | Categories: <strong>Event, Tips & Tricks</strong>
+                                    </p>
+                                    
+                                    <p class="articles_big_card_content">
+                                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor
+                                        sit
+                                        amet aliquam vel, ullamcorper sit amet.
+                                    </p>
                                 </div>
                             </div>
                         </div>
             
-                        <div class="right">
-                            <div>
+                        <!-- <div class="right">
+                            <div class="little_card">
                                 <p class="articles_little_card_title">
                                     {{articles.title}}
                                 </p>
@@ -373,13 +372,13 @@
                                 </p>
             
                                 <div class="articles_little_card_author">
-                                    <img :src="'img/' + articles.journalIcon + '.png'" alt="articles_logo">
+                                     <img :src="'img/' + articles.journalIcon + '.png'" alt="articles_logo"> 
                                     <p class="articles_author">
                                         {{articles.author}} <span class="articles_company">{{critics.journalName}}</span>
                                     </p>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </section>
