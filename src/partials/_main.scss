@@ -629,7 +629,7 @@
             height: 100%;
             margin-top: 30px;
             .left {
-                width: 59%;
+                width: 66%;
                 .big_card {
                     width: 878px;
                     height: 734px;
@@ -658,63 +658,30 @@
                 }
             }
             .right {
-                width: 41%;
-                height: 700px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                width: 412px;
+                height: 734px;
+                margin-left: auto;
+                padding: 37px;
+                background-color: white;
                 .little_card {
-                    position: relative;
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    width: 500px;
-                    height: 292px;
+                    width: 337px;
+                    height: 285px;
                     margin-left: auto;
-                    background-color: #fef7e9;
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        top: 280px;
-                        left: 30px;
-                        width: 20px;
-                        height: 20px;
-                        background-color: #fef7e9;
-                        transform: rotate(45deg);
-                    }
+                    font-family: $dmSansFont;
                     .articles_little_card_title {
-                        font-size: 25px;
-                        font-family: $dmSerifDisplayFont;
-                        margin-bottom: 20px;
+                        font-size: 24px;
+                        padding-top: 15px;
+                        padding-bottom: 5px;
                     }
-                    .articles_little_card_content {
-                        width: 400px;
-                        font-size: 18px;
-                        font-family: $dmSansFont;
-                        line-height: 30.6px;
-                        color: #747474;
-                        text-align: center;
-                    }
-                    .articles_little_card_author {
-                        display: flex;
-                        align-items: center;
-                        position: absolute;
-                        top: 293px;
-                        left: 0;
-                        width: 500px;
-                        height: 52px;
-                        margin-bottom: 20px;
-                        .articles_author {
-                            font-size: 18px;
-                            font-family: $dmSansFont;
-                            font-weight: 500;
-                            color: #747474;
-                            padding-left: 25px;
-                            .articles_company {
-                                font-weight: 500;
-                                color: black;
-                            }
+                    .articles_little_card_subtitle {
+                        font-size: 14px;
+                        span {
+                            color: #4f4f4f;
                         }
                     }
                 }

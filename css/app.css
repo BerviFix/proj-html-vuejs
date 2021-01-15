@@ -833,7 +833,7 @@ header .header_bottom .buy_book .buy_book_bottom .apple_bnt i {
   margin-top: 30px;
 }
 .articles .articles_wrapper .articles_bottom .left {
-  width: 59%;
+  width: 66%;
 }
 .articles .articles_wrapper .articles_bottom .left .big_card {
   width: 878px;
@@ -862,66 +862,33 @@ header .header_bottom .buy_book .buy_book_bottom .apple_bnt i {
   color: #4f4f4f;
 }
 .articles .articles_wrapper .articles_bottom .right {
-  width: 41%;
-  height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 412px;
+  height: 734px;
+  margin-left: auto;
+  padding: 37px;
+  background-color: white;
 }
 .articles .articles_wrapper .articles_bottom .right .little_card {
-  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 500px;
-  height: 292px;
+  width: 337px;
+  height: 285px;
   margin-left: auto;
-  background-color: #fef7e9;
-}
-.articles .articles_wrapper .articles_bottom .right .little_card::before {
-  content: "";
-  position: absolute;
-  top: 280px;
-  left: 30px;
-  width: 20px;
-  height: 20px;
-  background-color: #fef7e9;
-  transform: rotate(45deg);
+  font-family: "DM Sans", sans-serif;
 }
 .articles .articles_wrapper .articles_bottom .right .little_card .articles_little_card_title {
-  font-size: 25px;
-  font-family: "DM Serif Display", serif;
-  margin-bottom: 20px;
+  font-size: 24px;
+  padding-top: 15px;
+  padding-bottom: 5px;
 }
-.articles .articles_wrapper .articles_bottom .right .little_card .articles_little_card_content {
-  width: 400px;
-  font-size: 18px;
-  font-family: "DM Sans", sans-serif;
-  line-height: 30.6px;
-  color: #747474;
-  text-align: center;
+.articles .articles_wrapper .articles_bottom .right .little_card .articles_little_card_subtitle {
+  font-size: 14px;
 }
-.articles .articles_wrapper .articles_bottom .right .little_card .articles_little_card_author {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  top: 293px;
-  left: 0;
-  width: 500px;
-  height: 52px;
-  margin-bottom: 20px;
-}
-.articles .articles_wrapper .articles_bottom .right .little_card .articles_little_card_author .articles_author {
-  font-size: 18px;
-  font-family: "DM Sans", sans-serif;
-  font-weight: 500;
-  color: #747474;
-  padding-left: 25px;
-}
-.articles .articles_wrapper .articles_bottom .right .little_card .articles_little_card_author .articles_author .articles_company {
-  font-weight: 500;
-  color: black;
+.articles .articles_wrapper .articles_bottom .right .little_card .articles_little_card_subtitle span {
+  color: #4f4f4f;
 }
 
 footer {
