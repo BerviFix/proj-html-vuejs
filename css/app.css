@@ -634,6 +634,7 @@ header .aside_box .box p {
 .events .events_wrapper .events_bottom .event_card img {
   width: 100%;
   height: 270px;
+  transition: filter 0.3s linear;
 }
 .events .events_wrapper .events_bottom .event_card img:hover {
   filter: opacity(70%);
