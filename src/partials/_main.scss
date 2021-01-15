@@ -206,6 +206,11 @@
                     background-repeat: no-repeat;
                     color: white;
                     overflow: hidden;
+                    transition: all 0.2s linear;
+                    &:hover {
+                        box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.5);
+                        transform: scale(1.05)
+                    }
                     .overlay {
                         display: flex;
                         justify-content: center;
