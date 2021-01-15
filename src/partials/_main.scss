@@ -691,9 +691,148 @@
 }
 
 footer {
+    position: relative;
     width: 100%;
     height: 515px;
-     background-image: url("../img/background_header.jpg");
+    background-image: url("../img/background_header.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background: black;
+        background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+        .footer_wrapper {
+            display: flex;
+            justify-content: space-around;
+            width: 78%;
+            height: 250px;
+            margin-left: 85px;
+            margin-top: 115px;
+            .section_content_about {
+                width: 25%;
+                height: 100%;
+                margin-left: 120px;
+                .section_title {
+                    font-size: 20px;
+                    letter-spacing: 2px;
+                    color: white;
+                    font-family: $dmSerifDisplayFont;
+                }
+                .section_text {
+                    width: 330px;
+                    margin-top: 30px;
+                    font-size: 18px;
+                    font-family: $dmSansFont;
+                    color: #cccccc;
+                }
+            }
+            .section_content_links {
+                width: 25%;
+                height: 100%;
+                padding-left: 42px;
+                .section_title {
+                    font-size: 20px;
+                    letter-spacing: 2px;
+                    color: white;
+                    font-family: $dmSerifDisplayFont;
+                }
+                .section_links {
+                    margin-top: 20px;
+                    ul {
+                        list-style: none;
+                        li {
+                            padding: 8px 0px;
+                            color: white;
+                            i {
+                                font-size: 15px;
+                            }
+                            a {
+                                text-decoration: none;
+                                color: inherit;
+                                cursor: pointer;
+                                padding-left: 10px;
+                                font-size: 15px;
+                                font-family: $dmSansFont;
+                            }
+                        }
+                    }
+                }
+            }
+            .section_content_contact {
+                width: 25%;
+                height: 100%;
+                .section_title {
+                    font-size: 20px;
+                    letter-spacing: 2px;
+                    color: white;
+                    font-family: $dmSerifDisplayFont;
+                }
+                .section_contacts {
+                    margin-top: 20px;
+                    ul {
+                        list-style: none;
+                        li {
+                            padding: 10px 0px;
+                            color: #cccccc;
+                            a {
+                                text-decoration: none;
+                                color: inherit;
+                                cursor: pointer;
+                                font-size: 15px;
+                                font-family: $dmSansFont;
+                                span {
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+                .section_social {
+                    margin-top: 30px;
+                    ul {
+                        list-style: none;
+                        li {
+                            display: inline-block;
+                            padding: 0px 13px;
+                            color: #cccccc;
+                            a {
+                                text-decoration: none;
+                                color: inherit;
+                                cursor: pointer;
+                                font-size: 15px;
+                                font-family: $dmSansFont;
+                                i {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer_credits {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        .credits {
+            font-size: 13px;
+            font-family: $dmSansFont;
+            color: #aaaaaa;
+            a {
+                text-decoration: none;
+                color: inherit;
+                cursor: pointer;
+                color: white;
+            }
+        }
+    }
 }

@@ -892,9 +892,148 @@ header .header_bottom .buy_book .buy_book_bottom .apple_bnt i {
 }
 
 footer {
+  position: relative;
   width: 100%;
   height: 515px;
   background-image: url("../img/background_header.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+}
+footer .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: black;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+}
+footer .overlay .footer_wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 78%;
+  height: 250px;
+  margin-left: 85px;
+  margin-top: 115px;
+}
+footer .overlay .footer_wrapper .section_content_about {
+  width: 25%;
+  height: 100%;
+  margin-left: 120px;
+}
+footer .overlay .footer_wrapper .section_content_about .section_title {
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: white;
+  font-family: "DM Serif Display", serif;
+}
+footer .overlay .footer_wrapper .section_content_about .section_text {
+  width: 330px;
+  margin-top: 30px;
+  font-size: 18px;
+  font-family: "DM Sans", sans-serif;
+  color: #cccccc;
+}
+footer .overlay .footer_wrapper .section_content_links {
+  width: 25%;
+  height: 100%;
+  padding-left: 42px;
+}
+footer .overlay .footer_wrapper .section_content_links .section_title {
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: white;
+  font-family: "DM Serif Display", serif;
+}
+footer .overlay .footer_wrapper .section_content_links .section_links {
+  margin-top: 20px;
+}
+footer .overlay .footer_wrapper .section_content_links .section_links ul {
+  list-style: none;
+}
+footer .overlay .footer_wrapper .section_content_links .section_links ul li {
+  padding: 8px 0px;
+  color: white;
+}
+footer .overlay .footer_wrapper .section_content_links .section_links ul li i {
+  font-size: 15px;
+}
+footer .overlay .footer_wrapper .section_content_links .section_links ul li a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  padding-left: 10px;
+  font-size: 15px;
+  font-family: "DM Sans", sans-serif;
+}
+footer .overlay .footer_wrapper .section_content_contact {
+  width: 25%;
+  height: 100%;
+}
+footer .overlay .footer_wrapper .section_content_contact .section_title {
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: white;
+  font-family: "DM Serif Display", serif;
+}
+footer .overlay .footer_wrapper .section_content_contact .section_contacts {
+  margin-top: 20px;
+}
+footer .overlay .footer_wrapper .section_content_contact .section_contacts ul {
+  list-style: none;
+}
+footer .overlay .footer_wrapper .section_content_contact .section_contacts ul li {
+  padding: 10px 0px;
+  color: #cccccc;
+}
+footer .overlay .footer_wrapper .section_content_contact .section_contacts ul li a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: "DM Sans", sans-serif;
+}
+footer .overlay .footer_wrapper .section_content_contact .section_contacts ul li a span {
+  color: white;
+}
+footer .overlay .footer_wrapper .section_content_contact .section_social {
+  margin-top: 30px;
+}
+footer .overlay .footer_wrapper .section_content_contact .section_social ul {
+  list-style: none;
+}
+footer .overlay .footer_wrapper .section_content_contact .section_social ul li {
+  display: inline-block;
+  padding: 0px 13px;
+  color: #cccccc;
+}
+footer .overlay .footer_wrapper .section_content_contact .section_social ul li a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: "DM Sans", sans-serif;
+}
+footer .overlay .footer_wrapper .section_content_contact .section_social ul li a i {
+  font-size: 16px;
+}
+footer .footer_credits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+footer .footer_credits .credits {
+  font-size: 13px;
+  font-family: "DM Sans", sans-serif;
+  color: #aaaaaa;
+}
+footer .footer_credits .credits a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  color: white;
 }

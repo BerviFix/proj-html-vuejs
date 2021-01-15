@@ -147,6 +147,71 @@ var app = new Vue({
                 class: 'little_card'
             }
         ],
+        footerAbout: [
+            {
+                text: 
+                'Vivamus suscipit tortor eget felis porttitor volutpat. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat.',
+            },
+        ],
+        footerLinks: [
+            {
+                text: 'Latest Books',
+                url: '',
+            },
+            {
+                text: 'Upcoming Events',
+                url: '',
+            },
+            {
+                text: 'Recent Articles',
+                url: '',
+            },
+            {
+                text: 'Business Enquiries',
+                url: '',
+            },
+            {
+                text: 'Visit My Foundation',
+                url: '',
+            },
+        ],
+        footerContact: [
+            {
+                text: '63 E. Studebaker Street Bolingbrook, IL 60440',
+            },
+            {
+                text: 'Phone: (800) 000-0000',
+            },
+            {
+                text: 'Mobile: (800) 000-0000',
+            },
+            {
+                text: 'Email:',
+                email: 'info@your-company.com',
+            },
+        ],
+        social: [
+            {
+                social: "fa-facebook-f",
+                prefix: "fab ",
+            },
+            {
+                social: "fa-twitter",
+                prefix: "fab ",
+            },
+            {
+                social: "fa-instagram",
+                prefix: "fab ",
+            },
+            {
+                social: "fa-linkedin-in",
+                prefix: "fab ",
+            },
+            {
+                social: "fa-youtube",
+                prefix: "fab ",
+            },
+        ],
     },
     methods: {
         clickContact: function (index) {

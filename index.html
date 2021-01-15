@@ -393,9 +393,68 @@
 
             <!-- footer-->
             <footer>
-                <div class="footer_wrapper">
-            
+                <div class="overlay">
+                    <div class="footer_wrapper">
+                        <div class="logo">
+                            <img :src="'img/' + webSiteLogo" alt="logo">
+                        </div>
+                        <div class="section_content_about" v-for="item in footerAbout">
+                            <p class="section_title">
+                                ABOUT ME
+                            </p>
+                            
+                            <div class="section_text">
+                                {{item.text}}
+                            </div>
+                        </div>
+
+                        <div class="section_content_links" >
+                            <p class="section_title">
+                                USEFUL LINKS
+                            </p>
+                        
+                            <div class="section_links">
+                                <ul>
+                                    <li v-for="item in footerLinks">
+                                        <i class="fas fa-chevron-right"></i>
+                                        <a href="#">{{item.text}}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="section_content_contact">
+                            <p class="section_title">
+                                CONTACT INFO
+                            </p>
+                            
+                            <div class="section_contacts">
+                                <ul>
+                                    <li v-for="contact in footerContact">
+                                        <a href="#">{{contact.text}} <span>{{contact.email}}</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="section_social">
+                                <ul id="social">
+                                    <li v-for="page in social">
+                                        <a href="#">
+                                            <i :class="page.prefix + page.social"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="footer_credits">
+                        <p class="credits">
+                            © Copyright 2012 - 2021 | Avada Theme by <a href="#">ThemeFusion</a> | All Rights Reserved | Powered by <a href="#">WordPress</a> 
+                        </p>
+                    </div>
                 </div>
+
             </footer>
             <!-- /footer-->
         </main>
