@@ -458,6 +458,7 @@ header .aside_box .box p {
   color: white;
   overflow: hidden;
   transition: all 0.2s linear;
+  cursor: pointer;
 }
 .critics .critics_wrapper .critics_bottom .left .big_card:hover {
   box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.5);
@@ -540,6 +541,7 @@ header .aside_box .box p {
   height: 292px;
   margin-left: auto;
   background-color: #fef7e9;
+  cursor: pointer;
 }
 .critics .critics_wrapper .critics_bottom .right .little_card::before {
   content: "";
@@ -633,6 +635,7 @@ header .aside_box .box p {
   width: 451px;
   height: 506px;
   background-color: white;
+  cursor: pointer;
 }
 .events .events_wrapper .events_bottom .event_card img {
   width: 100%;
@@ -774,6 +777,7 @@ header .aside_box .box p {
   background-repeat: no-repeat;
   overflow: hidden;
   transition: all 0.2s linear;
+  cursor: pointer;
 }
 .info .info_wrapper .info_bottom .info_card:hover {
   box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.5);
@@ -892,6 +896,7 @@ header .aside_box .box p {
   padding: 46px;
   background-color: white;
   font-family: "DM Sans", sans-serif;
+  cursor: pointer;
 }
 .articles .articles_wrapper .articles_bottom .left .big_card .content_wrapper {
   width: 717px;
@@ -929,6 +934,7 @@ header .aside_box .box p {
   height: 285px;
   margin-left: auto;
   font-family: "DM Sans", sans-serif;
+  cursor: pointer;
 }
 .articles .articles_wrapper .articles_bottom .right .little_card .img_container {
   width: 337px;
